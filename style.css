@@ -1,0 +1,134 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap');
+
+:root {
+  --outfit: 'Outfit', sans-serif;
+  --softBlue: hsl(215, 51%, 70%);
+  --cyan: hsl(178, 100%, 50%);
+  --mainBg: hsl(217, 54%, 11%);
+  --cardBg: hsl(216, 50%, 16%);
+  --line: hsl(215, 32%, 27%);
+  --white: hsl(0, 0%, 100%);
+}
+
+body {
+  background-color: var(--mainBg);
+  color: var(--softBlue);
+  font-family: var(--outfit);
+  font-size: 1.15rem;
+  font-weight: 300;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.card {
+  background-color: var(--cardBg);
+  width: 20rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 1.5rem;
+  border-radius: 1rem;
+  box-shadow: 0 2rem 1rem 1rem hsla(217, 54%, 8%, 0.5);
+}
+
+.img-container {
+  position: relative;
+}
+
+.equilibrium {
+  display: block;
+  width: 100%;
+  border-radius: 0.5rem;
+}
+
+.overlay {
+  background-color: hsla(178, 100%, 50%, 0.5);
+  opacity: 0;
+  position: absolute;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  border-radius: 0.5rem;
+  transition: all 0.3s ease;
+}
+
+.overlay:hover {
+  cursor: pointer;
+  opacity: 100%;
+}
+
+.heading {
+  color: var(--white);
+  font-size: 1.5rem;
+}
+
+.content {
+  line-height: 1.7rem;
+}
+
+.stats {
+  font-size: 1rem;
+  display: flex;
+  justify-content: space-between;
+  margin-block: 1.5rem;
+}
+
+.ethereum,
+.clock {
+  margin-bottom: -3px;
+}
+
+.value {
+  color: var(--cyan);
+  font-weight: 600;
+}
+
+.creator {
+  font-size: 1rem;
+  display: flex;
+  align-items: center;
+  border-top: 1px solid var(--line);
+  padding-block: 0.5rem;
+}
+
+.boy {
+  width: 2rem;
+  border: 2px solid var(--white);
+  border-radius: 50%;
+}
+
+.creator>p {
+  margin-left: 1.5rem;
+}
+
+.c-name {
+  color: var(--white);
+  font-weight: 400;
+}
+
+.c-name:hover,
+.heading:hover {
+  color: var(--cyan);
+  cursor: pointer;
+}
+
+@media screen and (max-width: 375px) {
+  .card {
+    width: 18rem;
+  }
+
+  .content {
+    font-size: 1.05rem;
+  }
+
+  .stats {
+    margin-block: 1rem;
+  }
+
+  .creator {
+    padding-bottom: 0;
+  }
+}
