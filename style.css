@@ -59,7 +59,10 @@ body {
   cursor: pointer;
   opacity: 100%;
 }
+body{
+  animation: mymove 5s;
 
+}
 .heading {
   color: var(--white);
   font-size: 1.5rem;
@@ -131,4 +134,13 @@ body {
   .creator {
     padding-bottom: 0;
   }
+}
+
+@keyframes mymove {
+  from {
+    top: 200px;
+    width: 0;
+  }
+  to {top: 0px;
+  width: 100%;}
 }
